@@ -5,7 +5,7 @@ android:layout_height="match_parent"
 android:background="#2197db">
 
     <TextView
-        android:text="TestApp"
+        android:text="智慧农业大棚"
         android:id="@+id/loginbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,37 +63,25 @@ android:background="#2197db">
             android:textColorHint="#ff666666"
             android:textSize="16.0sp"
             android:hint="请输入密码" />
-    </LinearLayout>
-    <Button
-        android:id="@+id/lanBtn"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/input"
-        android:layout_marginTop="10dp"
-        android:background="#3aadfd"
-        android:text="登  录"
-        android:textColor="#ffffff"
-        android:textSize="18dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="28dp"
-        android:layout_marginRight="28dp"/>
+        </LinearLayout>
+
     <Button
         android:id="@+id/netBtn"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/input"
         android:layout_marginTop="10dp"
         android:background="#3aadfd"
-        android:text="登  录"
+        android:text="登录"
         android:textColor="#ffffff"
         android:textSize="18dp"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="28dp"
         android:layout_marginRight="28dp"/>
+
     <TextView
         android:text=""
         android:layout_width="wrap_content"
-        android:layout_below="@+id/loginBtn"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:id="@+id/promptText"

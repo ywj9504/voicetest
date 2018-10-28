@@ -10,6 +10,7 @@ import android.os.StrictMode;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -34,7 +35,6 @@ public abstract class ActivityCommon extends AppCompatActivity {
     protected TextView txtResult;
     protected TextView txtResponse;
     protected TextView txtLog;
-    protected Button setting;
     protected Button btn;
 
     protected Handler handler;
@@ -52,7 +52,7 @@ public abstract class ActivityCommon extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 //        InFileStream.setContext(this);
-        setContentView(layout);
+//        setContentView(layout);
         initView();
         handler = new android.os.Handler() {
 
@@ -74,31 +74,32 @@ public abstract class ActivityCommon extends AppCompatActivity {
     protected abstract void initRecog();
 
     protected void handleMsg(Message msg) {
-        if (txtLog != null && msg.obj != null) {
-            txtLog.append(msg.obj.toString() + "\n");
-        }
+        //if (txtLog != null && msg.obj != null) {
+            //txtLog.append(msg.obj.toString() + "\n");
+        //}
     }
 
-    protected void initView() {
-        txtResult = (TextView) findViewById(R.id.txtResult);
-        txtResponse = (TextView) findViewById(R.id.getMsg);
-        txtLog = (TextView) findViewById(R.id.txtLog);
-        btn = (Button) findViewById(R.id.btn);
-        setting = (Button) findViewById(R.id.checking);
-        txtLog.setText(descText + "\n");
-        if (setting != null && settingActivityClass != null) {
-            setting.setOnClickListener(new View.OnClickListener() {
+    protected abstract void initView();
+//    {
+//        txtResult = (TextView) findViewById(R.id.txtResult);
+//        txtResponse = (TextView) findViewById(R.id.getMsg);
+//        txtLog = (TextView) findViewById(R.id.txtLog);
+//        btn = (Button) findViewById(R.id.btn);
+        //setting = (Button) findViewById(R.id.checking);
+        //txtLog.setText(descText + "\n");
+//        if (setting != null && settingActivityClass != null) {
+//            setting.setOnClickListener(new View.OnClickListener() {
+//
+//                @Override
+//                public void onClick(View v) {
+//                    running = true;
+//                    Intent intent = new Intent(ActivityCommon.this, settingActivityClass);
+//                    startActivityForResult(intent, 1);
+//                }
+//            });
+//        }
 
-                @Override
-                public void onClick(View v) {
-                    running = true;
-                    Intent intent = new Intent(ActivityCommon.this, settingActivityClass);
-                    startActivityForResult(intent, 1);
-                }
-            });
-        }
-
-    }
+//    }
 
 
     /**
