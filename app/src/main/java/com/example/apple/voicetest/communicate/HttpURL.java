@@ -36,9 +36,9 @@ public class HttpURL {
 //
 //    private SharedPreferences.Editor editor;
 
-//    private static String baseurl = "http://10.101.170.22:2345/api/";
+    private static String baseurl = "http://10.101.170.22:2345/api/";
 
-    private static String baseurl = "http://10.103.246.23:2345/api/";
+//    private static String baseurl = "http://10.103.246.23:2345/api/";
 
     public void HttpURL() {
 //        preference = getSharedPreferences("cookie", MODE_PRIVATE);

@@ -47,12 +47,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         preference =getSharedPreferences("cookie", MODE_PRIVATE);
-        if (preference.getString("sessionid",null)!=null ) {
-            Intent intent = new Intent();
-            intent.setClass(MainActivity.this, TabLayoutPage.class);
-            finish();
-            startActivity(intent);
-        }
+//        if (preference.getString("sessionid",null)!=null ) {
+//            Intent intent = new Intent();
+//            intent.setClass(MainActivity.this, TabLayoutPage.class);
+//            finish();
+//            startActivity(intent);
+//        }
         setContentView(R.layout.activity_main);
 
         editor=preference.edit();
